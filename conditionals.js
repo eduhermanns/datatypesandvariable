@@ -77,9 +77,9 @@ if (flavor === "chocolate" && vessel === "bowl" && toppings === "sprinkles") {
 }
 
 //Question 6 :
-var shirtWidth = 18; 
-var shirtLength = 29; 
-var shirtSleeve = 8.47
+let shirtWidth = 18; 
+let shirtLength = 29; 
+let shirtSleeve = 8.47
  if ( shirtWidth == 18 && shirtLength == 28 && shirtSleeve == 8.13) {
      console.log("Size S (small)");
  } else if ( shirtWidth <=20 && shirtLength <= 29 && shirtSleeve <= 8.38) {
@@ -101,3 +101,34 @@ eatsPlants === true && eatsAnimals === true ? category = "omnivore" :
 eatsPlants === true && eatsAnimals === false ? ccategory = "herbivore":
 eatsPlants === false && eatsAnimals == true ?  category = "carnivore" :
 console.log(category);
+
+//Question 8:
+let education = "Bachelor's degree";
+let salary;
+
+
+switch (education) {
+  case "no high school diploma":
+    salary = 25636;
+    break;
+  case "high school diploma":
+    salary= 35256;
+    break;
+  case "Associate's degree":
+    salary = 41496;
+    break;
+  case "Bachelor's degree":
+    salary= 59124;
+    break;
+  case "Master's degree":
+    salary = 69732;
+    break;
+  case "Professional degree ":
+    salary = 89960;
+    break;
+  case  "Doctoral degree":
+    salary = 84396;
+  default:
+    salary = "N/A"
+}
+console.log("In 2015, a person with " + education + " earned an average of $" + salary.toLocaleString("en-US") + "/year.")
