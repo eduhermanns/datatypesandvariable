@@ -1,19 +1,21 @@
 
 //Question 1:
-function laugh(){
-   return "hahahahahahahahahaha!";
+
+function laugh() {
+  return "hahahahahahahahahaha!";
 }
 console.log(laugh())
 
-//Question 2:
+//Question 2: 
 function laugh(num){
-  let laughed = " ";
-  for (i = 0; i < num; i++){
-    laughed += " ha"
+  laughs = "";
+  for(i = 0; i < num; i++){
+    laughs += "ha"
   }
-  console.log(laughed + "! ")
+  return laughs
 }
-laugh(3);
+console.log(laugh(5));
+
 //Question 3:
 function makeLine(length) {
  let line = "";
@@ -23,10 +25,9 @@ function makeLine(length) {
  return line + "\n";
 }
 
-
-function buildTriangle(length){
+function buildTriangle(trianglelength){
   let asterisk = " ";
-  for (i = 1; i <= length; i++){
+  for (i = 1; i <= trianglelength; i++){
     asterisk = i
     console.log(makeLine(asterisk))
   }
@@ -34,38 +35,32 @@ function buildTriangle(length){
 }
 buildTriangle(10);
 
-
 //Question 4:
-const laugh = function laugh(num){
-  
-  let laughed = " ";
-  for (i = 0; i < num; i++){
-    laughed += "ha"
+const laugh = function(num){
+  let laughs = " ";
+  for(i = 0; i < num; i++){
+    laughs += "ha"
   }
-  return laughed + "! "
+  return laughs + "!"
 }
-console.log(laugh(3));
+console.log(laugh(10));
 
 //Question 5:
-const cry = function emotions(){
-  return "boohoo!"
+let cry = function emotion() {
+  return  "boohoo!"
 }
-console.log(cry())
+console.log(cry());
 
 //Question 6:
-let feelings = function laugh(num){
- 
+function emotions(feeling, myfunction){
+  console.log ("I am " + feeling + myfunction(3))
+}
+
+emotions("happy ", function laugh(num) {
+
   let laughWord = "";
-  
-  for(i = 0; i < num; i++){
-    laughWord += "Ha"
+  for (i = 0; i < num; i++){
+    laughWord += "ha"
   }
   return laughWord + "! "
-}
-
-
-
-function emotions(attitude, feelings){
- console.log("I am " + attitude + ", " + feelings);
-}
-emotions("happy",feelings(3))
+} );
